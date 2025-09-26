@@ -20,6 +20,7 @@ header {
   border-bottom: 1px solid #ddd;
   background-color: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(5px);
+  z-index: 999;
 }
 
 header h1,

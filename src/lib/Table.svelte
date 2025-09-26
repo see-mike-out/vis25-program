@@ -264,6 +264,7 @@
     column-gap: 1rem;
     row-gap: 0.5rem;
     align-items: center;
+    z-index: 999;
   }
   #filters > * {
     display: block;
