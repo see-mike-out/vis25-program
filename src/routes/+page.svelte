@@ -7,7 +7,7 @@
   <p>
     Visit <a href="https://ieeevis.org/year/2025/info/program/week-at-a-glance"
       >the official website</a
-    > for up-to-date information. Anything you save here is personal.
+    > for up-to-date info.
   </p>
 </header>
 <Table></Table>

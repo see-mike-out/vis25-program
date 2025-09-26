@@ -14,7 +14,9 @@ export type WorkshopItem = {
   series: string,
   type: string,
   link: string,
-  index?: number
+  index?: number,
+  organizers?: string[],
+  panels?: string[]
 }
 
 export type PaperItemParsed = {
@@ -55,5 +57,7 @@ export type WorkshopItemParsed = {
   type: string,
   broad_type: string,
   index: number,
-  link?: string
+  link?: string,
+  organizers?: string[],
+  panels?: string[]
 }

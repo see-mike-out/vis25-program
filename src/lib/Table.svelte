@@ -80,6 +80,8 @@
         block,
         title: item.title,
         authors: [],
+        organizers: item.organizers,
+        panels: item.panels,
         type: item.type,
         broad_type: item.type,
         link: item.link,
@@ -226,8 +228,14 @@
                         }}
                       /> <span>Interested</span></label
                     >
+                    {#if "organizers" in session && session.organizers && session.organizers.length > 0}
+                      <span class="organizers"><strong>Organizers</strong> {session.organizers.join(", ")}</span>
+                    {/if}
+                    {#if "panels" in session && session.panels && session.panels.length > 0}
+                      <span class="organizers"><strong>Panels</strong> {session.panels.join(", ")}</span>
+                    {/if}
                     {#if "link" in session && session.link && session.link.length > 0}
-                      <a href={session.link} target="_blank">More</a>
+                      <a href={session.link} target="_blank" style="font-size: 0.9rem; margin-top: 0.25rem;">Find more here</a>
                     {/if}
                     {#if "papers" in session && session.papers}
                       <Papers papers={session.papers}></Papers>
@@ -252,13 +260,13 @@
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
     display: flex;
+    flex-wrap: wrap;
     column-gap: 1rem;
+    row-gap: 0.5rem;
     align-items: center;
   }
   #filters > * {
     display: block;
-    border-right: 1px solid #ddd;
-    padding-right: 1rem;
   }
   #filters > *:last-child {
     border-right: 0;
@@ -372,5 +380,17 @@
   label > select {
     display: block;
     margin-left: 0.25rem;
+  }
+  .organizers {
+    display: block;
+    margin-top: 0.25rem;
+    color: #666;
+    font-size: 0.85rem;
+  }
+  .organizers strong {
+    font-weight: 600;
+    background-color: #efefef;
+    padding: 0.05rem 0.15rem;
+    border-radius: 0.25rem;
   }
 </style>

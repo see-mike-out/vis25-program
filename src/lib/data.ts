@@ -4107,7 +4107,7 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: 'VISxAI',
     type: 'Workshop',
-    link: '',
+    link: 'https://visxai.io/',
     index: 1
   }, {
     title: '8th Workshop on Visualization for AI Explainability',
@@ -4115,15 +4115,15 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'VISxAI',
     type: 'Workshop',
-    link: '',
-    index: 1
+    link: 'https://visxai.io/',
+    index: 2
   }, {
     title: '16th Annual Workshop on Visual Analytics in Healthcare',
     date: 'Sunday, November 2',
     time: "9:00am - 12:30pm (CET)",
     series: 'VAHC',
     type: 'Workshop',
-    link: '',
+    link: 'https://visualanalyticshealthcare.github.io/homepage/2025/',
     index: 1
   }, {
     title: '16th Annual Workshop on Visual Analytics in Healthcare',
@@ -4131,15 +4131,15 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'VAHC',
     type: 'Workshop',
-    link: '',
-    index: 1
+    link: 'https://visualanalyticshealthcare.github.io/homepage/2025/',
+    index: 2
   }, {
     title: 'Workshop on Topological Data Analysis and Visualization',
     date: 'Sunday, November 2',
     time: "9:00am - 12:30pm (CET)",
     series: 'TopoInVis',
     type: 'Workshop',
-    link: '',
+    link: 'https://topoinvis-workshop.github.io/2025/',
     index: 1
   }, {
     title: '9th Workshop on Visualization for the Digital Humanities',
@@ -4147,7 +4147,7 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: 'VIS4DH ↔ DH4VIS',
     type: 'Workshop',
-    link: '',
+    link: 'https://vis4dh.dbvis.de/',
     index: 1
   }, {
     title: 'alt.VIS Workshop 2025',
@@ -4155,7 +4155,7 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: 'alt.VIS',
     type: 'Workshop',
-    link: '',
+    link: 'https://altvis.github.io/',
     index: 1
   }, {
     title: 'Developing Immersive Visualizations and Interactions for the Web with Anu.js',
@@ -4163,7 +4163,8 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-developing-immersive-visualizations-and-interactions-for-the-web-with-anujs',
+    organizers: ['David Saffo', 'Benjamin Lee', 'Cheng Yao Wang', 'Feiyu Lu', 'Blair MacIntyre'],
     index: 1
   }, {
     title: 'User-centered Evaluation in Visualization',
@@ -4171,7 +4172,8 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    organizers: ['Niklas Rönnberg', 'Camilla Forsell'],
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-user-centered-evaluation-in-visualization',
     index: 1
   }, {
     title: 'Bio+MedVis Challenge',
@@ -4179,7 +4181,7 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: '',
     type: 'Contest',
-    link: '',
+    link: 'http://biovis.net/2025/biovisChallenges_vis/',
     index: 1
   }, {
     title: 'Seventh Workshop on Visualization for Communication',
@@ -4187,7 +4189,7 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'VisComm',
     type: 'Workshop',
-    link: '',
+    link: 'https://www.viscomm.io/',
     index: 2
   }, {
     title: 'Unraveling Relationships of Uncertainty, AI, and Decision-Making',
@@ -4195,7 +4197,7 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'Uncertainty Visualization',
     type: 'Workshop',
-    link: '',
+    link: 'https://tusharathawale.github.io/uncertainty-vis-workshop-2025/index.html',
     index: 2
   }, {
     title: 'Multimodal Experiences for Remote Communication Around Data Online',
@@ -4203,7 +4205,7 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'MERCADO',
     type: 'Workshop',
-    link: '',
+    link: 'https://sites.google.com/view/mercadoworkshop/vis2025',
     index: 2
   }, {
     title: 'Live Collaborative Immersive Analytics Development with DashSpace',
@@ -4211,7 +4213,13 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-live-collaborative-immersive-analytics-development-with-dashspace',
+    organizers: ['Marcel Borowski',
+      'Peter W. S. Butcher',
+      'Shannon Jade Jones',
+      'Panagiotis D. Ritsos',
+      'Clemens Nylandsted Klokmose',
+      'Niklas Elmqvist'],
     index: 2
   }, {
     title: 'Running Online User Studies with the reVISit Framework',
@@ -4219,7 +4227,8 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    organizers: ['Jack Wilburn', 'Hilson Shrestha', 'Zach Cutler', 'Yiren Ding', 'Tingying He', 'Andrew M McNutt', 'Lane Harrison', 'Alexander Lex'],
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-running-online-user-studies-with-the-revisit-framework',
     index: 2
   }, {
     title: 'SciVis Contest',
@@ -4227,7 +4236,7 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: '',
     type: 'Contest',
-    link: '',
+    link: 'https://sciviscontest2025.github.io/',
     index: 2
   }, {
     title: 'GenAI, Agents, and the Future of VIS',
@@ -4235,7 +4244,7 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: 'VISxGenAI',
     type: 'Workshop',
-    link: '',
+    link: 'https://visxgenai.github.io/',
     index: 3
   }, {
     title: 'GenAI, Agents, and the Future of VIS',
@@ -4243,15 +4252,15 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'VISxGenAI',
     type: 'Workshop',
-    link: '',
-    index: 3
+    link: 'https://visxgenai.github.io/',
+    index: 4
   }, {
     title: 'Envisioning a Research Agenda for Input Visualization',
     date: 'Monday, November 3',
     time: "9:00am - 12:30pm (CET)",
     series: 'InputVis',
     type: 'Workshop',
-    link: '',
+    link: 'https://inputvisualization.github.io/vis2025/',
     index: 3
   }, {
     title: 'Envisioning a Research Agenda for Input Visualization',
@@ -4259,15 +4268,15 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'InputVis',
     type: 'Workshop',
-    link: '',
-    index: 3
+    link: 'https://inputvisualization.github.io/vis2025/',
+    index: 4
   }, {
     title: 'Human Factors in Immersive Analytics',
     date: 'Monday, November 3',
     time: "9:00am - 12:30pm (CET)",
     series: 'Immersive Analytics',
     type: 'Workshop',
-    link: '',
+    link: 'https://sites.google.com/monash.edu/hfia-workshop',
     index: 3
   }, {
     title: '3rd IEEE VIS Workshop on Visualization Education, Literacy, and Activities',
@@ -4275,7 +4284,7 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: 'EduVis',
     type: 'Workshop',
-    link: '',
+    link: 'https://ieee-eduvis.github.io/',
     index: 3
   }, {
     title: '15th IEEE Workshop on Large Data Analysis & Visualization',
@@ -4283,7 +4292,7 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: 'LDAV',
     type: 'Workshop',
-    link: '',
+    link: 'https://ldav.io/2025/',
     index: 3
   }, {
     title: 'MLLM4Vis: Multimodal Large Language Models for Information Visualization',
@@ -4291,7 +4300,8 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    organizers: ['Enamul Hoque'],
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-mllm4vis-multimodal-large-language-models-for-information-visualization',
     index: 3
   }, {
     title: 'Using Color Harmony and Gen AI Suggestion to Transform your Data Visualizations',
@@ -4299,7 +4309,8 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-using-color-harmony-and-gen-ai-suggestion-to-transform-your-data-visualizations',
+    organizers: ['Theresa-Marie Rhyne'],
     index: 3
   }, {
     title: 'Hands-On TTK Tutorial: Solving Practical Problems in Small Groups',
@@ -4307,7 +4318,8 @@ export let workshops: WorkshopItem[] = [
     time: "9:00am - 12:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    organizers: ['Jonas Lukasczyk', 'Christoph Garth', 'Michael Will', 'Mathieu Pont', 'Julien Tierny'],
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-hands-on-ttk-tutorial-solving-practical-problems-in-small-groups',
     index: 3
   }, {
     title: '2nd Workshop on Accessible Data Visualization',
@@ -4315,7 +4327,7 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'AccessViz',
     type: 'Workshop',
-    link: '',
+    link: 'https://accessviz.github.io/',
     index: 4
   }, {
     title: 'Engaging Critical Workforce In co-Design aNd Assessment',
@@ -4323,7 +4335,7 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: 'ECWIDNA',
     type: 'Workshop',
-    link: '',
+    link: 'https://sites.google.com/view/ecwidna',
     index: 4
   }, {
     title: 'Visualization for Explainable AI',
@@ -4331,7 +4343,8 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    organizers: ['Roy A Ruddle', 'Liqun Liu', 'Mohsen Azarmi'],
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-visualization-for-explainable-ai-xai',
     index: 4
   }, {
     title: 'Building Progressive Visual Analytics Systems with ProgressiVis',
@@ -4339,7 +4352,8 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    organizers: ['Jean-Daniel Fekete'],
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-building-progressive-visual-analytics-systems-with-progressivis',
     index: 4
   }, {
     title: 'Visualization Analysis and Design',
@@ -4347,7 +4361,8 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: '',
     type: 'Tutorial',
-    link: '',
+    organizers: ['Tamara Munzner'],
+    link: 'https://ieeevis.org/year/2025/info/program/tutorials#-visualization-analysis-and-design',
     index: 4
   }, {
     title: 'VAST Challenge',
@@ -4355,7 +4370,7 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 5:30pm (CET)",
     series: '',
     type: 'Contest',
-    link: '',
+    link: 'https://vast-challenge.github.io/2025/',
     index: 4
   }, {
     title: 'Welcome & VIS Opening / Keynote',
@@ -4363,7 +4378,7 @@ export let workshops: WorkshopItem[] = [
     time: "9:30am - 10:45am (CET)",
     series: '',
     type: 'Others',
-    link: '',
+    link: 'https://ieeevis.org/year/2025/info/invited-speakers/keynote-speaker',
     index: 5
   }, {
     title: 'Welcome Reception',
@@ -4379,21 +4394,25 @@ export let workshops: WorkshopItem[] = [
     time: "9:30am - 10:45am (CET)",
     series: '',
     type: 'Panel',
-    link: '',
+    link: 'https://ieeevis.org/year/2025/info/program/panels#visable-who-do-we-exclude-by-current-visualization-practices-and-how-do-we-change-that',
+    organizers: ['Nina Doerr', 'Sita Vriend', 'Katrin Angerbauer', 'Miriah Meyer', 'Michael Sedlmair'],
+    panels: ['Dominik Moritz', 'Cindy Xiong Bearfield', 'Alice Thudt', 'Bruce Walker', 'Kim Marriott', 'Danielle Albers Szafir']
   }, {
     title: 'TALK, TRY, TELL: Challenges and Opportunities for Theory-Grounded Data Visualization in Extended Reality',
     date: 'Wednesday, November 4',
     time: "11:15am - 12:30pm (CET)",
     series: '',
     type: 'Panel',
-    link: '',
+    link: 'https://ieeevis.org/year/2025/info/program/panels#talk-try-tell-challenges-and-opportunities-for-theory-grounded-data-visualization-in-extended-reality',
+    organizers: ['Andreas Bueckle', 'Christiane Hütter', 'Sebastian Pirch', 'Felix Müller', 'Philipp Friedrich', 'Martin Chiettini', 'Jörg Menche', 'Katy Börner'],
+    panels: ['Niklas Elmqvist', 'Renata G. Raidou', 'Chris Bryan', 'Hannes Kaufmann', 'Peter Mindek']
   }, {
     title: 'Research <> Practice Engagement Session',
     date: 'Wednesday, November 4',
     time: "2:00pm - 3:15pm (CET)",
     series: '',
     type: 'Vis In Practice',
-    link: '',
+    link: 'https://ieeevis.org/year/2025/info/visinpractice',
 
   }, {
     title: 'From Cognition to Context: A Conversation about Technical Approaches, Social Values, and Tradeoffs in Visualization',
@@ -4401,21 +4420,25 @@ export let workshops: WorkshopItem[] = [
     time: "2:00pm - 3:15pm (CET)",
     series: '',
     type: 'Panel',
-    link: ''
+    link: 'https://ieeevis.org/year/2025/info/program/panels#from-cognition-to-context-a-conversation-about-technical-approaches-social-values-and-tradeoffs-in-visualization',
+    organizers: ['Lane Harrison', 'Alex Kale', 'Miriah Meyer', 'Carolina Nobre', 'Arvind Satyanarayan'],
+    panels: ['Karen Schloss', 'Catherine D’Ignazio', 'John Burn-Murdoch']
   }, {
     title: 'What Does Psychology Really Mean to Visualization Research? Towards PsychXVis and VisXPsych',
     date: 'Wednesday, November 4',
     time: "3:45pm - 5:00pm (CET)",
     series: '',
     type: 'Panel',
-    link: ''
+    link: 'https://ieeevis.org/year/2025/info/program/panels#what-does-psychology-really-mean-to-visualization-research-towards-psychxvis-and-visxpsych',
+    organizers: ['Arran Zeyu Wang', 'Danielle Albers Szafir'],
+    panels: ['Min Chen', 'Karen Schloss', 'Alvitta Ottley', 'Lace Padilla', 'Cindy Xiong Bearfield', 'Alex Kale']
   }, {
     title: 'Poster Session',
     date: 'Wednesday, November 4',
     time: "5:00pm - 6:00pm (CET)",
     series: '',
     type: 'Poster',
-    link: ''
+    link: 'https://ieeevis.org/year/2025/info/program/posters'
   }, {
     title: 'Conference Dinner',
     date: 'Wednesday, November 4',
@@ -4429,35 +4452,41 @@ export let workshops: WorkshopItem[] = [
     time: "9:30am - 10:45am (CET)",
     series: '',
     type: 'Vis Arts Papers',
-    link: ''
+    link: 'https://visap.net/2025/'
   }, {
     title: 'IEEE VIS Reviewing - On a Path to Self-Destruction?',
     date: 'Thursday, November 5',
     time: "9:30am - 10:45am (CET)",
     series: '',
     type: 'Panel',
-    link: ''
+    link: 'https://ieeevis.org/year/2025/info/program/panels#ieee-vis-reviewing---on-a-path-to-self-destruction',
+    organizers: ['Petra Isenberg', 'Gunther H. Weber', 'Niklas Elmqvist', 'Narges Mahyar'],
+    panels: ['Han-Wei Shen', 'Michael Sedlmair', 'Melanie Tory', 'Helwig Hauser', 'Bei Wang', 'Tamara Munzner']
   }, {
     title: 'VISAP Papers',
     date: 'Thursday, November 5',
     time: "11:15am - 12:30pm (CET)",
     series: '',
     type: 'Vis Arts Papers',
-    link: ''
+    link: 'https://visap.net/2025/'
   }, {
     title: 'Industry Meets Research: Future Needs and Opportunities for Visual Analytics in Industrial Manufacturing',
     date: 'Thursday, November 5',
     time: "11:15am - 12:30pm (CET)",
     series: '',
     type: 'Panel',
-    link: ''
+    link: 'https://ieeevis.org/year/2025/info/program/panels#industry-meets-research-future-needs-and-opportunities-for-visual-analytics-in-industrial-manufacturing',
+    organizers: ['Markus Wagner', 'Christina Stoiber', 'Alexander Rind', 'Tobias Schreck', 'Marc Streit', 'Kresimir Matkovic'],
+    panels: ['Christian Mittermayr', 'Harald Piringer', 'Lena Cibulski', 'Jörn Kohlhammer']
   }, {
     title: 'Words Divide, Pictures Unite” - Revisiting Otto Neurath’s ISOTYPE at 100',
     date: 'Thursday, November 5',
     time: "2:00pm - 3:15pm (CET)",
     series: '',
     type: 'Panel',
-    link: ''
+    link: 'https://ieeevis.org/year/2025/info/program/panels#words-divide-pictures-unite---revisiting-otto-neuraths-isotype-at-100',
+    organizers: ['Wolfgang Aigner', 'Eva Mayr', 'Torsten Möller', 'Verena Ingrid Prantl', 'Florian Windhager'],
+    panels: ['Danielle Albers Szafir', 'Theo Deutinger', 'Hans-Christian Hege', 'Samuel Huron', 'Gunther Sandner', 'Christiane Thenius']
   }, {
     title: 'How to make money with visualization?',
     date: 'Thursday, November 5',
@@ -4471,14 +4500,14 @@ export let workshops: WorkshopItem[] = [
     time: "6:00pm - 9:00pm (CET)",
     series: '',
     type: 'Vis Arts Program',
-    link: ''
+    link: 'https://visap.net/2025/'
   }, {
     title: 'Capston & Closing',
     date: 'Friday, November 7',
     time: "11:15am - 12:30pm (CET)",
     series: '',
     type: 'Others',
-    link: ''
+    link: 'https://ieeevis.org/year/2025/info/invited-speakers/capstone-speaker'
   }
 ]
 
