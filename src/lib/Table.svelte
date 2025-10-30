@@ -5,6 +5,9 @@
     blocks,
     day_order,
     session_order,
+    paperLocations,
+    locationOrder,
+    roomFloor,
   } from "$lib/data";
   import { onMount } from "svelte";
   import type {
@@ -27,6 +30,7 @@
     let parsed: SessionItemParsed[] = [];
     let parsed_map: { [key: string]: SessionItemParsed } = {};
     for (const item of items) {
+      let loc = paperLocations[item.session];
       let paper_parsed: PaperItemParsed = {
         session: item.session,
         // "date": "Tuesday, November 4",
@@ -39,6 +43,7 @@
         title: item.title,
         authors: item.authors,
         type: item.type,
+        location: loc,
       };
       let session = item.session;
       if (!parsed_map[session]) {
@@ -55,6 +60,9 @@
             session_order[paper_parsed.block] +
             day_order[paper_parsed.day] * 100,
           broad_type: "Papers",
+          location: loc,
+          locationOrder: locationOrder[loc] ?? 30,
+          floor: roomFloor[loc] ?? undefined,
         };
       } else {
         parsed_map[session].papers.push(paper_parsed);
@@ -86,6 +94,10 @@
         broad_type: item.type,
         link: item.link,
         index: session_order[block] + day_order[day] * 100,
+        series: item.series ?? undefined,
+        location: item.location,
+        locationOrder: locationOrder[item.location] ?? 30,
+        floor: roomFloor[item.location] ?? undefined,
       };
     });
     return parsed;
@@ -108,7 +120,7 @@
       (a, b) => day_order[a] - day_order[b],
     );
     let sessions_grouped = sessions
-      .toSorted((a, b) => a.index - b.index)
+      .toSorted((a, b) => a.locationOrder - b.locationOrder)
       .reduce(
         (acc, cur) => {
           let k = cur.day + " " + cur.block;
@@ -217,7 +229,13 @@
                         : session.type.replaceAll(" ", "-"))}
                   >
                     <span class="session-type">{session.type}</span>
-                    <h4 class="session-title">{session.session}</h4>
+                    <h4 class="session-title">
+                      {#if "series" in session && session.series}<span
+                          class="series">[{session.series}]</span
+                        >{/if}
+                      {session.session}
+                    </h4>
+                    <span class="location">{session.location}  {#if session.floor !== undefined} (Level: {session.floor}){/if}</span>
                     <label class="interest"
                       ><input
                         type="checkbox"
@@ -229,13 +247,24 @@
                       /> <span>Interested</span></label
                     >
                     {#if "organizers" in session && session.organizers && session.organizers.length > 0}
-                      <span class="organizers"><strong>Organizers</strong> {session.organizers.join(", ")}</span>
+                      <span class="organizers"
+                        ><strong>Organizers</strong>
+                        {session.organizers.join(", ")}</span
+                      >
                     {/if}
                     {#if "panels" in session && session.panels && session.panels.length > 0}
-                      <span class="organizers"><strong>Panels</strong> {session.panels.join(", ")}</span>
+                      <span class="organizers"
+                        ><strong>Panels</strong>
+                        {session.panels.join(", ")}</span
+                      >
                     {/if}
                     {#if "link" in session && session.link && session.link.length > 0}
-                      <a href={session.link} target="_blank" style="font-size: 0.9rem; margin-top: 0.25rem;">Find more here</a>
+                      <a
+                        href={session.link}
+                        target="_blank"
+                        style="font-size: 0.9rem; margin-top: 0.25rem;"
+                        >Find more here</a
+                      >
                     {/if}
                     {#if "papers" in session && session.papers}
                       <Papers papers={session.papers}></Papers>
@@ -393,5 +422,18 @@
     background-color: #efefef;
     padding: 0.05rem 0.15rem;
     border-radius: 0.25rem;
+  }
+  .series {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: #666;
+    font-size: 0.8rem;
+  }
+  .location {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    color: #666;
   }
 </style>

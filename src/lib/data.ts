@@ -1,5 +1,97 @@
 import type { PaperItem, WorkshopItem } from "./types";
 
+// Rescheduled Papers 2 (Short)
+// Rescheduled Papers (Full)
+
+export let locationOrder: { [key: string]: number } = {
+  'Room 0.11 + 0.12': 0,
+  'Room 0.94 + 0.95': 1,
+  'Room 0.96 + 0.97': 2,
+  'Room 1.14': 3,
+  'Room 1.15 + 1.16': 4,
+  'Room 1.32 + 1.33': 5,
+  'Room 1.61 + 1.62': 6,
+  'Room 1.85 + 1.86': 7,
+  'Hall E': 8,
+  'Hall E1': 9,
+  'Hall E2': 10,
+  'Hall M1': 11,
+  'Hall M2': 12,
+  'Foyer E': 13
+};
+
+export let roomFloor: { [key: string]: number } = {
+  'Room 0.11 + 0.12': 0,
+  'Room 0.94 + 0.95': 0,
+  'Room 0.96 + 0.97': 0,
+  'Room 1.14': 1,
+  'Room 1.15 + 1.16': 1,
+  'Room 1.32 + 1.33': 1,
+  'Room 1.61 + 1.62': 1,
+  'Room 1.85 + 1.86': 1,
+  'Hall E': 0,
+  'Hall E1': 0,
+  'Hall E2': 0,
+  'Hall M1': 1,
+  'Hall M2': 1,
+  'Foyer E': 0
+};
+
+
+export let paperLocations: { [key: string]: string } = {
+  'Awards, Best Short Papers': 'Hall E',
+  'Best Papers': 'Hall E',
+  'Best Papers & Test-of-Time Awards': 'Hall E',
+  'Encoding & Comprehension (Virtual)': 'Room 0.94 + 0.95',
+  'Maps & Spatial Vis': 'Room 1.14',
+  'VA for AI': 'Hall E1',
+  'Multivariate and Time': 'Hall E2',
+  'Rescheduled Papers 2': 'Hall M1',
+  'Dastardly Dashboards': 'Hall M2',
+  'Viz for AI & AI for Viz (Virtual)': 'Room 0.94 + 0.95',
+  'Of Trees and Treemaps': 'Room 1.14',
+  'Visualization with/for/in AI': 'Hall E1',
+  'Fields, Fields, Fields': 'Hall E2',
+  'Visualization for Science': 'Hall M1',
+  'Charts, Diagrams & Plots': 'Hall M2',
+  'Explorations in Abstract and Physical Spaces': 'Room 1.14',
+  'The VIS in GenAI': 'Hall E1',
+  'Embeddings & Metrics': 'Hall E2',
+  'Volume': 'Hall M1',
+  'Ordering and Layout': 'Hall M2',
+  'Graphs and Networks': 'Room 1.14',
+  'Agentic Visualization and Intelligent Systems': 'Hall E1',
+  'Dimensionality Reduction and Parameter Space Analysis': 'Hall E2',
+  'Flow and Topology': 'Hall M1',
+  'Authoring and Design': 'Hall M2',
+  'Multi-modal and Spatial (Virtual)': 'Room 0.94 + 0.95',
+  'Explanation, Exploration, and Model Configuration': 'Hall E1',
+  'Workflows & Infrastructure': 'Hall E2',
+  'Visualization in-the-wild': 'Hall M1',
+  'The Color and the Shape': 'Hall M2',
+  'Volumes & 3D (Virtual)': 'Room 0.94 + 0.95',
+  'Visual Analytics Methods, Tools, and Infrastructure': 'Hall E1',
+  'From Data to Meaning': 'Hall E2',
+  'Games, Sports, and Music': 'Hall M1',
+  'Vis & Language': 'Hall M2',
+  'Rescheduled Papers': 'Room 0.94 + 0.95',
+  'Perception': 'Room 1.14',
+  'Analysts, Assemble!': 'Hall E1',
+  'Algorithms and Workflows': 'Hall E2',
+  'Transportation, Buildings, and Urban Vis': 'Hall M1',
+  'Immersive & Ubiquitous Analytics': 'Hall M2',
+  'Perception & Semantics': 'Room 1.14',
+  'Interaction, Provenance, and Collaboration': 'Hall E1',
+  'Analytics & Reasoning': 'Hall E2',
+  'Biomedical Visualization': 'Hall M1',
+  'Immersive Visualization and Extended Reality': 'Hall M2',
+  'Visualization Literacy': 'Room 0.11 + 0.12',
+  'Stories and the Journalists Who Tell Them': 'Room 0.94 + 0.95',
+  'Reflections and Looking Forward': 'Room 0.95 + 0.96',
+  'Models, Methods, and Typologies': 'Room 1.14',
+  'Trust No One': 'Hall E',
+};
+
 export let papers: PaperItem[] = [
   {
     "session": "Best Papers",
@@ -150,6 +242,20 @@ export let papers: PaperItem[] = [
     "session": "VA for AI",
     "date": "Wednesday, November 5",
     "time": "9:30am - 10:45am (CET)",
+    "title": "An In-Situ Visual Analytics Framework for Deep Neural Networks",
+    "authors": [
+      "Guan Li",
+      "Junpeng Wang",
+      "Yang Wang",
+      "Guihua Shan",
+      "Ying Zhao"
+    ],
+    "type": "Full Papers"
+  },
+  {
+    "session": "VA for AI",
+    "date": "Wednesday, November 5",
+    "time": "9:30am - 10:45am (CET)",
     "title": "A Simulation-based Approach for Quantifying the Impact of Interactive Label Correction for Machine Learning",
     "authors": [
       "Zhen Li",
@@ -161,20 +267,6 @@ export let papers: PaperItem[] = [
       "Fan Yang",
       "Hui Zhang",
       "Shixia Liu"
-    ],
-    "type": "Full Papers"
-  },
-  {
-    "session": "VA for AI",
-    "date": "Wednesday, November 5",
-    "time": "9:30am - 10:45am (CET)",
-    "title": "An In-Situ Visual Analytics Framework for Deep Neural Networks",
-    "authors": [
-      "Guan Li",
-      "Junpeng Wang",
-      "Yang Wang",
-      "Guihua Shan",
-      "Ying Zhao"
     ],
     "type": "Full Papers"
   },
@@ -307,20 +399,6 @@ export let papers: PaperItem[] = [
     "session": "Dastardly Dashboards",
     "date": "Wednesday, November 5",
     "time": "9:30am - 10:45am (CET)",
-    "title": "Dashboard Vision: Using Eye-Tracking to Understand and Predict Dashboard Viewing Behaviors",
-    "authors": [
-      "Manling Yang",
-      "Yihan Hou",
-      "Ling Li",
-      "Remco Chang",
-      "Wei Zeng"
-    ],
-    "type": "Full Papers + 1 Short Paper"
-  },
-  {
-    "session": "Dastardly Dashboards",
-    "date": "Wednesday, November 5",
-    "time": "9:30am - 10:45am (CET)",
     "title": "Drillboards: Adaptive Visualization Dashboards for Dynamic Personalization of Visualization Experiences",
     "authors": [
       "Sungbok Shin",
@@ -341,6 +419,20 @@ export let papers: PaperItem[] = [
       "Leilani Battle",
       "Vidya Setlur",
       "Anamaria Crisan"
+    ],
+    "type": "Full Papers + 1 Short Paper"
+  },
+  {
+    "session": "Dastardly Dashboards",
+    "date": "Wednesday, November 5",
+    "time": "9:30am - 10:45am (CET)",
+    "title": "Dashboard Vision: Using Eye-Tracking to Understand and Predict Dashboard Viewing Behaviors",
+    "authors": [
+      "Manling Yang",
+      "Yihan Hou",
+      "Ling Li",
+      "Remco Chang",
+      "Wei Zeng"
     ],
     "type": "Full Papers + 1 Short Paper"
   },
@@ -437,7 +529,7 @@ export let papers: PaperItem[] = [
     "type": "Full Papers"
   },
   {
-    "session": "Encoding and Comprehension (Virtual)",
+    "session": "Encoding & Comprehension (Virtual)",
     "date": "Wednesday, November 5",
     "time": "9:30am - 10:45am (CET)",
     "title": "Evaluating judgements of spatial correlation in visual displays of scalar field distributions",
@@ -448,7 +540,7 @@ export let papers: PaperItem[] = [
     "type": "Full Papers"
   },
   {
-    "session": "Encoding and Comprehension (Virtual)",
+    "session": "Encoding & Comprehension (Virtual)",
     "date": "Wednesday, November 5",
     "time": "9:30am - 10:45am (CET)",
     "title": "Using Tactile Charts to Support Comprehension and Learning of Complex Visualizations for Blind and Low Vision Individuals",
@@ -462,7 +554,7 @@ export let papers: PaperItem[] = [
     "type": "Full Papers"
   },
   {
-    "session": "Encoding and Comprehension (Virtual)",
+    "session": "Encoding & Comprehension (Virtual)",
     "date": "Wednesday, November 5",
     "time": "9:30am - 10:45am (CET)",
     "title": "Reframing Pattern: A Comprehensive Approach to a Composite Visual Variable",
@@ -475,7 +567,7 @@ export let papers: PaperItem[] = [
     "type": "Full Papers"
   },
   {
-    "session": "Encoding and Comprehension (Virtual)",
+    "session": "Encoding & Comprehension (Virtual)",
     "date": "Wednesday, November 5",
     "time": "9:30am - 10:45am (CET)",
     "title": "Perceiving Slope and Acceleration: Evidence for Variable Tempo Sampling in Pitch-Based Sonification of Functions",
@@ -491,7 +583,7 @@ export let papers: PaperItem[] = [
     "type": "Full Papers"
   },
   {
-    "session": "Encoding and Comprehension (Virtual)",
+    "session": "Encoding & Comprehension (Virtual)",
     "date": "Wednesday, November 5",
     "time": "9:30am - 10:45am (CET)",
     "title": "TiVy: Time Series Visual Summary for Scalable Visualization",
@@ -505,7 +597,7 @@ export let papers: PaperItem[] = [
     "type": "Full Papers"
   },
   {
-    "session": "Encoding and Comprehension (Virtual)",
+    "session": "Encoding & Comprehension (Virtual)",
     "date": "Wednesday, November 5",
     "time": "9:30am - 10:45am (CET)",
     "title": "A Rigorous Behavior Assessment of CNNs Using a Data-Domain Sampling Regime",
@@ -552,21 +644,6 @@ export let papers: PaperItem[] = [
     "session": "Fields, Fields, Fields",
     "date": "Wednesday, November 5",
     "time": "11:15am - 12:30pm (CET)",
-    "title": "Distributed Neural Representation for Reactive In Situ Visualization",
-    "authors": [
-      "Qi Wu",
-      "Joseph A. Insley",
-      "Victor A. Mateevitsi",
-      "Silvio Rizzi",
-      "Michael E. Papka",
-      "Kwan-Liu Ma"
-    ],
-    "type": "Full Papers"
-  },
-  {
-    "session": "Fields, Fields, Fields",
-    "date": "Wednesday, November 5",
-    "time": "11:15am - 12:30pm (CET)",
     "title": "Improving Neural Volume Rendering via Learning View-Dependent Integral Approximation",
     "authors": [
       "Yifan Wang",
@@ -603,6 +680,21 @@ export let papers: PaperItem[] = [
     "type": "Full Papers"
   },
   {
+    "session": "Fields, Fields, Fields",
+    "date": "Wednesday, November 5",
+    "time": "11:15am - 12:30pm (CET)",
+    "title": "Distributed Neural Representation for Reactive In Situ Visualization",
+    "authors": [
+      "Qi Wu",
+      "Joseph A. Insley",
+      "Victor A. Mateevitsi",
+      "Silvio Rizzi",
+      "Michael E. Papka",
+      "Kwan-Liu Ma"
+    ],
+    "type": "Full Papers"
+  },
+  {
     "session": "Of Trees and Treemaps",
     "date": "Wednesday, November 5",
     "time": "11:15am - 12:30pm (CET)",
@@ -621,22 +713,6 @@ export let papers: PaperItem[] = [
     "session": "Of Trees and Treemaps",
     "date": "Wednesday, November 5",
     "time": "11:15am - 12:30pm (CET)",
-    "title": "Hierarchical Fuzzy-Cluster-Aware Grid Layout for Large-Scale Data",
-    "authors": [
-      "Yuxing Zhou",
-      "Changjian Chen",
-      "Zhiyang Shen",
-      "Jiangning Zhu",
-      "Jiashu Chen",
-      "Weikai Yang",
-      "Shixia Liu"
-    ],
-    "type": "Full Papers"
-  },
-  {
-    "session": "Of Trees and Treemaps",
-    "date": "Wednesday, November 5",
-    "time": "11:15am - 12:30pm (CET)",
     "title": "Multi-field Visualization: Trait design and trait-induced merge trees",
     "authors": [
       "Danhua Lei",
@@ -646,6 +722,22 @@ export let papers: PaperItem[] = [
       "Leif Denby",
       "Talha Bin Masood",
       "Ingrid Hotz"
+    ],
+    "type": "Full Papers"
+  },
+  {
+    "session": "Of Trees and Treemaps",
+    "date": "Wednesday, November 5",
+    "time": "11:15am - 12:30pm (CET)",
+    "title": "Hierarchical Fuzzy-Cluster-Aware Grid Layout for Large-Scale Data",
+    "authors": [
+      "Yuxing Zhou",
+      "Changjian Chen",
+      "Zhiyang Shen",
+      "Jiangning Zhu",
+      "Jiashu Chen",
+      "Weikai Yang",
+      "Shixia Liu"
     ],
     "type": "Full Papers"
   },
@@ -748,10 +840,11 @@ export let papers: PaperItem[] = [
     "session": "Visualization with/for/in AI",
     "date": "Wednesday, November 5",
     "time": "11:15am - 12:30pm (CET)",
-    "title": "The Agentopia Times: Understanding and Mitigating Hallucinations in Multi-Agent LLM Systems via Data Journalism Gameplay",
+    "title": "Enhancing XAI Interpretation through a Reverse Mapping from Insights to Visualizations",
     "authors": [
-      "Yilin Lu",
-      "Shurui Du",
+      "Aniket Nuthalapati",
+      "Nicholas Hinds",
+      "Brian Y Lim",
       "Qianwen Wang"
     ],
     "type": "Short Papers"
@@ -777,17 +870,6 @@ export let papers: PaperItem[] = [
       "Johnathan L Sun",
       "Victoria R Li",
       "Martin Wattenberg"
-    ],
-    "type": "Short Papers"
-  },
-  {
-    "session": "Visualization with/for/in AI",
-    "date": "Wednesday, November 5",
-    "time": "11:15am - 12:30pm (CET)",
-    "title": "Semantic Pathway: An Interactive Visualization of Hidden States and Token Influence in LLMs",
-    "authors": [
-      "Mithilesh Kumar Singh",
-      "Klaus Mueller"
     ],
     "type": "Short Papers"
   },
@@ -1043,14 +1125,13 @@ export let papers: PaperItem[] = [
     "type": "Short Papers"
   },
   {
-    "session": "Viz for AI & AI for Viz (Virtual)",
+    "session": "Visualization with/for/in AI",
     "date": "Wednesday, November 5",
     "time": "11:15am - 12:30pm (CET)",
-    "title": "Enhancing XAI Interpretation through a Reverse Mapping from Insights to Visualizations",
+    "title": "The Agentopia Times: Understanding and Mitigating Hallucinations in Multi-Agent LLM Systems via Data Journalism Gameplay",
     "authors": [
-      "Aniket Nuthalapati",
-      "Nicholas Hinds",
-      "Brian Y Lim",
+      "Yilin Lu",
+      "Shurui Du",
       "Qianwen Wang"
     ],
     "type": "Short Papers"
@@ -1193,7 +1274,7 @@ export let papers: PaperItem[] = [
     "session": "Embeddings & Metrics",
     "date": "Wednesday, November 5",
     "time": "2:00pm - 3:15pm (CET)",
-    "title": "Quantifying Visualization Complexity Using Image-Quality Metrics",
+    "title": "What Makes a Visualization Image Complex?",
     "authors": [
       "Mengdi Chu",
       "Zefeng Qiu",
@@ -1222,19 +1303,6 @@ export let papers: PaperItem[] = [
     "session": "Embeddings & Metrics",
     "date": "Wednesday, November 5",
     "time": "2:00pm - 3:15pm (CET)",
-    "title": "HUMAP: Hierarchical Uniform Manifold Approximation and Projection",
-    "authors": [
-      "Wilson E. Marcílio-Jr",
-      "Danilo M. Eler",
-      "Fernando V. Paulovich",
-      "Rafael Messias"
-    ],
-    "type": "Full Papers"
-  },
-  {
-    "session": "Embeddings & Metrics",
-    "date": "Wednesday, November 5",
-    "time": "2:00pm - 3:15pm (CET)",
     "title": "ReorderBench: A Benchmark for Matrix Reordering",
     "authors": [
       "Jiangning Zhu",
@@ -1244,6 +1312,19 @@ export let papers: PaperItem[] = [
       "Fengyuan Tian",
       "Mengchen Liu",
       "Shixia Liu"
+    ],
+    "type": "Full Papers"
+  },
+  {
+    "session": "Embeddings & Metrics",
+    "date": "Wednesday, November 5",
+    "time": "2:00pm - 3:15pm (CET)",
+    "title": "HUMAP: Hierarchical Uniform Manifold Approximation and Projection",
+    "authors": [
+      "Wilson E. Marcílio-Jr",
+      "Danilo M. Eler",
+      "Fernando V. Paulovich",
+      "Rafael Messias"
     ],
     "type": "Full Papers"
   },
@@ -2343,19 +2424,6 @@ export let papers: PaperItem[] = [
     "session": "Multi-modal and Spatial (Virtual)",
     "date": "Thursday, November 6",
     "time": "9:30am - 10:45am (CET)",
-    "title": "Drawing in the Flow: A Data-Aware Mixed-Reality Sketching Interface for Illustrative 3D Flow Visualization",
-    "authors": [
-      "Walter Sands",
-      "Sean J Dorr",
-      "Kiet Tran",
-      "Daniel F. Keefe"
-    ],
-    "type": "Short Papers"
-  },
-  {
-    "session": "Multi-modal and Spatial (Virtual)",
-    "date": "Thursday, November 6",
-    "time": "9:30am - 10:45am (CET)",
     "title": "ChartMark: A Structured Grammar for Chart Annotation",
     "authors": [
       "Yiyu Chen",
@@ -2365,6 +2433,17 @@ export let papers: PaperItem[] = [
       "Leixian Shen",
       "Hui Xiong",
       "Yuyu Luo"
+    ],
+    "type": "Short Papers"
+  },
+  {
+    "session": "Multi-modal and Spatial (Virtual)",
+    "date": "Thursday, November 6",
+    "time": "9:30am - 10:45am (CET)",
+    "title": "Semantic Pathway: An Interactive Visualization of Hidden States and Token Influence in LLMs",
+    "authors": [
+      "Mithilesh Kumar Singh",
+      "Klaus Mueller"
     ],
     "type": "Short Papers"
   },
@@ -2463,7 +2542,7 @@ export let papers: PaperItem[] = [
       "Hui Zhang",
       "Yingcai Wu"
     ],
-    "type": "Full Papers"
+    "type": "Full Papers + 1 Short Paper"
   },
   {
     "session": "Games, Sports, and Music",
@@ -2478,7 +2557,7 @@ export let papers: PaperItem[] = [
       "Kai Xu",
       "Siming Chen"
     ],
-    "type": "Full Papers"
+    "type": "Full Papers + 1 Short Paper"
   },
   {
     "session": "Games, Sports, and Music",
@@ -2492,7 +2571,7 @@ export let papers: PaperItem[] = [
       "Jincheng Li",
       "Chi Harold Liu"
     ],
-    "type": "Full Papers"
+    "type": "Full Papers + 1 Short Paper"
   },
   {
     "session": "Games, Sports, and Music",
@@ -2509,7 +2588,7 @@ export let papers: PaperItem[] = [
       "Xiaojuan Ma",
       "Quan Li"
     ],
-    "type": "Full Papers"
+    "type": "Full Papers + 1 Short Paper"
   },
   {
     "session": "Games, Sports, and Music",
@@ -2522,7 +2601,7 @@ export let papers: PaperItem[] = [
       "Benedikt Brachtel",
       "Michael Sedlmair"
     ],
-    "type": "Full Papers"
+    "type": "Full Papers + 1 Short Paper"
   },
   {
     "session": "Games, Sports, and Music",
@@ -2534,7 +2613,7 @@ export let papers: PaperItem[] = [
       "William Thompson",
       "Chris Weaver"
     ],
-    "type": "Full Papers"
+    "type": "Full Papers + 1 Short Paper"
   },
   {
     "session": "Vis & Language",
@@ -3196,6 +3275,56 @@ export let papers: PaperItem[] = [
     "type": "Full Papers"
   },
   {
+    "session": "Rescheduled Papers",
+    "date": "Thursday, November 6",
+    "time": "2:00pm - 3:15pm (CET)",
+    "title": "2023 IEEE Scientific Visualization Contest Winner: VisAnywhere: Developing Multiplatform Scientific Visualization Applications",
+    "authors": [
+      "Thomas Marrinan", "Victor A. Mateevitsi", "Madeleine Moeller", "Alina Kanayinkal", "Michael E. Papka"
+    ],
+    "type": "Full Papers + 1 Short Paper"
+  },
+  {
+    "session": "Rescheduled Papers",
+    "date": "Thursday, November 6",
+    "time": "2:00pm - 3:15pm (CET)",
+    "title": "VisGuard: Securing Visualization Dissemination through Tamper-Resistant Data Retrieval",
+    "authors": [
+      "Huayuan Ye",
+      "Juntong Chen",
+      "Shenzhuo Zhang",
+      "Yipeng Zhang",
+      "Changbo Wang",
+      "Chenhui Li"
+    ],
+    "type": "Full Papers + 1 Short Paper"
+  },
+  {
+    "session": "Rescheduled Papers",
+    "date": "Thursday, November 6",
+    "time": "2:00pm - 3:15pm (CET)",
+    "title": "Drawing in the Flow: A Data-Aware Mixed-Reality Sketching Interface for Illustrative 3D Flow Visualization",
+    "authors": [
+      "Walter Sands",
+      "Sean J Dorr",
+      "Kiet Tran",
+      "Daniel F. Keefe"
+    ],
+    "type": "Full Papers + 1 Short Paper"
+  },
+  {
+    "session": "Rescheduled Papers",
+    "date": "Thursday, November 6",
+    "time": "2:00pm - 3:15pm (CET)",
+    "title": "FLINT: Learning-based Flow Estimation and Temporal Interpolation for Scientific Ensemble Visualization",
+    "authors": [
+      "Hamid Gadirov",
+      "Jos B.T.M. Roerdink",
+      "Steffen Frey"
+    ],
+    "type": "Full Papers + 1 Short Paper"
+  },
+  {
     "session": "Interaction, Provenance, and Collaboration",
     "date": "Thursday, November 6",
     "time": "3:45pm - 5:00pm (CET)",
@@ -3685,19 +3814,6 @@ export let papers: PaperItem[] = [
     "session": "Trust No One",
     "date": "Friday, November 7",
     "time": "9:30am - 10:45am (CET)",
-    "title": "Quantifying Visualization Vibes: Measuring Socio-Indexicality at Scale [Honorable Mention]",
-    "authors": [
-      "Amy Fox",
-      "Michelle Morgenstern",
-      "Graham Jones",
-      "Arvind Satyanarayan"
-    ],
-    "type": "Full Papers"
-  },
-  {
-    "session": "Trust No One",
-    "date": "Friday, November 7",
-    "time": "9:30am - 10:45am (CET)",
     "title": "Visualization Vibes: The Socio-Indexical Function of Visualization Design",
     "authors": [
       "Michelle Morgenstern",
@@ -3711,14 +3827,12 @@ export let papers: PaperItem[] = [
     "session": "Trust No One",
     "date": "Friday, November 7",
     "time": "9:30am - 10:45am (CET)",
-    "title": "VisGuard: Securing Visualization Dissemination through Tamper-Resistant Data Retrieval",
+    "title": "Quantifying Visualization Vibes: Measuring Socio-Indexicality at Scale [Honorable Mention]",
     "authors": [
-      "Huayuan Ye",
-      "Juntong Chen",
-      "Shenzhuo Zhang",
-      "Yipeng Zhang",
-      "Changbo Wang",
-      "Chenhui Li"
+      "Amy Fox",
+      "Michelle Morgenstern",
+      "Graham Jones",
+      "Arvind Satyanarayan"
     ],
     "type": "Full Papers"
   },
@@ -3803,21 +3917,6 @@ export let papers: PaperItem[] = [
     "session": "Stories and the Journalists Who Tell Them",
     "date": "Friday, November 7",
     "time": "9:30am - 10:45am (CET)",
-    "title": "Correcting Misperceptions at a Glance: Using Data Visualizations to Reduce Political Sectarianism",
-    "authors": [
-      "Doug Markant",
-      "Subham Sah",
-      "Alireza Karduni",
-      "Milad Rogha",
-      "My Thai",
-      "Wenwen Dou"
-    ],
-    "type": "Full Papers"
-  },
-  {
-    "session": "Stories and the Journalists Who Tell Them",
-    "date": "Friday, November 7",
-    "time": "9:30am - 10:45am (CET)",
     "title": "Immersive Data-Driven Storytelling: Scoping an Emerging Field Through the Lenses of Research, Journalism, and Games",
     "authors": [
       "Julián Méndez",
@@ -3841,6 +3940,21 @@ export let papers: PaperItem[] = [
       "Huamin Qu",
       "Yun Wang",
       "Siming Chen"
+    ],
+    "type": "Full Papers"
+  },
+  {
+    "session": "Stories and the Journalists Who Tell Them",
+    "date": "Friday, November 7",
+    "time": "9:30am - 10:45am (CET)",
+    "title": "Correcting Misperceptions at a Glance: Using Data Visualizations to Reduce Political Sectarianism (virtual)",
+    "authors": [
+      "Doug Markant",
+      "Subham Sah",
+      "Alireza Karduni",
+      "Milad Rogha",
+      "My Thai",
+      "Wenwen Dou"
     ],
     "type": "Full Papers"
   },
@@ -4075,20 +4189,6 @@ export let papers: PaperItem[] = [
     "session": "Reflections and Looking Forward",
     "date": "Friday, November 7",
     "time": "9:30am - 10:45am (CET)",
-    "title": "2023 IEEE Scientific Visualization Contest Winner: VisAnywhere: Developing Multiplatform Scientific Visualization Applications",
-    "authors": [
-      "Thomas Marrinan",
-      "Victor A. Mateevitsi",
-      "Madeleine Moeller",
-      "Alina Kanayinkal",
-      "Michael E. Papka"
-    ],
-    "type": "CG&A Papers"
-  },
-  {
-    "session": "Reflections and Looking Forward",
-    "date": "Friday, November 7",
-    "time": "9:30am - 10:45am (CET)",
     "title": "AI-in-The-Loop: The Future of Biomedical Visual Analytics Applications in the Era of AI",
     "authors": [
       "Katja Bühler",
@@ -4097,7 +4197,7 @@ export let papers: PaperItem[] = [
       "Pere-Pau Vázquez"
     ],
     "type": "CG&A Papers"
-  }
+  },
 ];
 
 export let workshops: WorkshopItem[] = [
@@ -4108,7 +4208,8 @@ export let workshops: WorkshopItem[] = [
     series: 'VISxAI',
     type: 'Workshop',
     link: 'https://visxai.io/',
-    index: 1
+    index: 1,
+    location: 'Hall M1'
   }, {
     title: '8th Workshop on Visualization for AI Explainability',
     date: 'Sunday, November 2',
@@ -4116,7 +4217,8 @@ export let workshops: WorkshopItem[] = [
     series: 'VISxAI',
     type: 'Workshop',
     link: 'https://visxai.io/',
-    index: 2
+    index: 2,
+    location: 'Hall M1'
   }, {
     title: '16th Annual Workshop on Visual Analytics in Healthcare',
     date: 'Sunday, November 2',
@@ -4124,7 +4226,8 @@ export let workshops: WorkshopItem[] = [
     series: 'VAHC',
     type: 'Workshop',
     link: 'https://visualanalyticshealthcare.github.io/homepage/2025/',
-    index: 1
+    index: 1,
+    location: 'Room 1.14'
   }, {
     title: '16th Annual Workshop on Visual Analytics in Healthcare',
     date: 'Sunday, November 2',
@@ -4132,7 +4235,8 @@ export let workshops: WorkshopItem[] = [
     series: 'VAHC',
     type: 'Workshop',
     link: 'https://visualanalyticshealthcare.github.io/homepage/2025/',
-    index: 2
+    index: 2,
+    location: 'Room 1.14'
   }, {
     title: 'Workshop on Topological Data Analysis and Visualization',
     date: 'Sunday, November 2',
@@ -4140,7 +4244,8 @@ export let workshops: WorkshopItem[] = [
     series: 'TopoInVis',
     type: 'Workshop',
     link: 'https://topoinvis-workshop.github.io/2025/',
-    index: 1
+    index: 1,
+    location: 'Room 1.61 + 1.62'
   }, {
     title: '9th Workshop on Visualization for the Digital Humanities',
     date: 'Sunday, November 2',
@@ -4148,7 +4253,8 @@ export let workshops: WorkshopItem[] = [
     series: 'VIS4DH ↔ DH4VIS',
     type: 'Workshop',
     link: 'https://vis4dh.dbvis.de/',
-    index: 1
+    index: 1,
+    location: 'Room 1.15 + 1.16'
   }, {
     title: 'alt.VIS Workshop 2025',
     date: 'Sunday, November 2',
@@ -4156,7 +4262,8 @@ export let workshops: WorkshopItem[] = [
     series: 'alt.VIS',
     type: 'Workshop',
     link: 'https://altvis.github.io/',
-    index: 1
+    index: 1,
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'Developing Immersive Visualizations and Interactions for the Web with Anu.js',
     date: 'Sunday, November 2',
@@ -4165,7 +4272,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-developing-immersive-visualizations-and-interactions-for-the-web-with-anujs',
     organizers: ['David Saffo', 'Benjamin Lee', 'Cheng Yao Wang', 'Feiyu Lu', 'Blair MacIntyre'],
-    index: 1
+    index: 1,
+    location: 'Room 1.85 + 1.86'
   }, {
     title: 'User-centered Evaluation in Visualization',
     date: 'Sunday, November 2',
@@ -4174,7 +4282,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     organizers: ['Niklas Rönnberg', 'Camilla Forsell'],
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-user-centered-evaluation-in-visualization',
-    index: 1
+    index: 1,
+    location: 'Room 1.32 + 1.33'
   }, {
     title: 'Bio+MedVis Challenge',
     date: 'Sunday, November 2',
@@ -4182,7 +4291,8 @@ export let workshops: WorkshopItem[] = [
     series: '',
     type: 'Contest',
     link: 'http://biovis.net/2025/biovisChallenges_vis/',
-    index: 1
+    index: 1,
+    location: 'Hall M2'
   }, {
     title: 'Seventh Workshop on Visualization for Communication',
     date: 'Sunday, November 2',
@@ -4190,7 +4300,8 @@ export let workshops: WorkshopItem[] = [
     series: 'VisComm',
     type: 'Workshop',
     link: 'https://www.viscomm.io/',
-    index: 2
+    index: 2,
+    location: 'Room 1.15 + 1.16'
   }, {
     title: 'Unraveling Relationships of Uncertainty, AI, and Decision-Making',
     date: 'Sunday, November 2',
@@ -4198,7 +4309,8 @@ export let workshops: WorkshopItem[] = [
     series: 'Uncertainty Visualization',
     type: 'Workshop',
     link: 'https://tusharathawale.github.io/uncertainty-vis-workshop-2025/index.html',
-    index: 2
+    index: 2,
+    location: 'Hall M2'
   }, {
     title: 'Multimodal Experiences for Remote Communication Around Data Online',
     date: 'Sunday, November 2',
@@ -4206,7 +4318,8 @@ export let workshops: WorkshopItem[] = [
     series: 'MERCADO',
     type: 'Workshop',
     link: 'https://sites.google.com/view/mercadoworkshop/vis2025',
-    index: 2
+    index: 2,
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'Live Collaborative Immersive Analytics Development with DashSpace',
     date: 'Sunday, November 2',
@@ -4220,7 +4333,8 @@ export let workshops: WorkshopItem[] = [
       'Panagiotis D. Ritsos',
       'Clemens Nylandsted Klokmose',
       'Niklas Elmqvist'],
-    index: 2
+    index: 2,
+    location: 'Room 1.85 + 1.86'
   }, {
     title: 'Running Online User Studies with the reVISit Framework',
     date: 'Sunday, November 2',
@@ -4229,7 +4343,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     organizers: ['Jack Wilburn', 'Hilson Shrestha', 'Zach Cutler', 'Yiren Ding', 'Tingying He', 'Andrew M McNutt', 'Lane Harrison', 'Alexander Lex'],
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-running-online-user-studies-with-the-revisit-framework',
-    index: 2
+    index: 2,
+    location: 'Room 1.32 + 1.33'
   }, {
     title: 'SciVis Contest',
     date: 'Sunday, November 2',
@@ -4237,7 +4352,8 @@ export let workshops: WorkshopItem[] = [
     series: '',
     type: 'Contest',
     link: 'https://sciviscontest2025.github.io/',
-    index: 2
+    index: 2,
+    location: 'Room 1.61 + 1.62'
   }, {
     title: 'GenAI, Agents, and the Future of VIS',
     date: 'Monday, November 3',
@@ -4245,7 +4361,8 @@ export let workshops: WorkshopItem[] = [
     series: 'VISxGenAI',
     type: 'Workshop',
     link: 'https://visxgenai.github.io/',
-    index: 3
+    index: 3,
+    location: 'Hall M1'
   }, {
     title: 'GenAI, Agents, and the Future of VIS',
     date: 'Monday, November 3',
@@ -4253,7 +4370,8 @@ export let workshops: WorkshopItem[] = [
     series: 'VISxGenAI',
     type: 'Workshop',
     link: 'https://visxgenai.github.io/',
-    index: 4
+    index: 4,
+    location: 'Hall M1'
   }, {
     title: 'Envisioning a Research Agenda for Input Visualization',
     date: 'Monday, November 3',
@@ -4261,7 +4379,8 @@ export let workshops: WorkshopItem[] = [
     series: 'InputVis',
     type: 'Workshop',
     link: 'https://inputvisualization.github.io/vis2025/',
-    index: 3
+    index: 3,
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'Envisioning a Research Agenda for Input Visualization',
     date: 'Monday, November 3',
@@ -4269,7 +4388,8 @@ export let workshops: WorkshopItem[] = [
     series: 'InputVis',
     type: 'Workshop',
     link: 'https://inputvisualization.github.io/vis2025/',
-    index: 4
+    index: 4,
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'Human Factors in Immersive Analytics',
     date: 'Monday, November 3',
@@ -4277,7 +4397,8 @@ export let workshops: WorkshopItem[] = [
     series: 'Immersive Analytics',
     type: 'Workshop',
     link: 'https://sites.google.com/monash.edu/hfia-workshop',
-    index: 3
+    index: 3,
+    location: 'Room 1.85 + 1.86'
   }, {
     title: '3rd IEEE VIS Workshop on Visualization Education, Literacy, and Activities',
     date: 'Monday, November 3',
@@ -4285,7 +4406,8 @@ export let workshops: WorkshopItem[] = [
     series: 'EduVis',
     type: 'Workshop',
     link: 'https://ieee-eduvis.github.io/',
-    index: 3
+    index: 3,
+    location: 'Room 1.15 + 1.16'
   }, {
     title: '15th IEEE Workshop on Large Data Analysis & Visualization',
     date: 'Monday, November 3',
@@ -4293,7 +4415,8 @@ export let workshops: WorkshopItem[] = [
     series: 'LDAV',
     type: 'Workshop',
     link: 'https://ldav.io/2025/',
-    index: 3
+    index: 3,
+    location: 'Hall M2'
   }, {
     title: 'MLLM4Vis: Multimodal Large Language Models for Information Visualization',
     date: 'Monday, November 3',
@@ -4302,7 +4425,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     organizers: ['Enamul Hoque'],
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-mllm4vis-multimodal-large-language-models-for-information-visualization',
-    index: 3
+    index: 3,
+    location: 'Room 1.61 + 1.62'
   }, {
     title: 'Using Color Harmony and Gen AI Suggestion to Transform your Data Visualizations',
     date: 'Monday, November 3',
@@ -4311,7 +4435,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-using-color-harmony-and-gen-ai-suggestion-to-transform-your-data-visualizations',
     organizers: ['Theresa-Marie Rhyne'],
-    index: 3
+    index: 3,
+    location: 'Room 1.14'
   }, {
     title: 'Hands-On TTK Tutorial: Solving Practical Problems in Small Groups',
     date: 'Monday, November 3',
@@ -4320,7 +4445,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     organizers: ['Jonas Lukasczyk', 'Christoph Garth', 'Michael Will', 'Mathieu Pont', 'Julien Tierny'],
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-hands-on-ttk-tutorial-solving-practical-problems-in-small-groups',
-    index: 3
+    index: 3,
+    location: 'Room 1.32 + 1.33'
   }, {
     title: '2nd Workshop on Accessible Data Visualization',
     date: 'Monday, November 3',
@@ -4328,7 +4454,8 @@ export let workshops: WorkshopItem[] = [
     series: 'AccessViz',
     type: 'Workshop',
     link: 'https://accessviz.github.io/',
-    index: 4
+    index: 4,
+    location: 'Room 1.15 + 1.16'
   }, {
     title: 'Engaging Critical Workforce In co-Design aNd Assessment',
     date: 'Monday, November 3',
@@ -4336,7 +4463,8 @@ export let workshops: WorkshopItem[] = [
     series: 'ECWIDNA',
     type: 'Workshop',
     link: 'https://sites.google.com/view/ecwidna',
-    index: 4
+    index: 4,
+    location: 'Room 1.32 + 1.33'
   }, {
     title: 'Visualization for Explainable AI',
     date: 'Monday, November 3',
@@ -4345,7 +4473,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     organizers: ['Roy A Ruddle', 'Liqun Liu', 'Mohsen Azarmi'],
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-visualization-for-explainable-ai-xai',
-    index: 4
+    index: 4,
+    location: 'Room 1.61 + 1.62'
   }, {
     title: 'Building Progressive Visual Analytics Systems with ProgressiVis',
     date: 'Monday, November 3',
@@ -4354,7 +4483,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     organizers: ['Jean-Daniel Fekete'],
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-building-progressive-visual-analytics-systems-with-progressivis',
-    index: 4
+    index: 4,
+    location: 'Room 1.85 + 1.86'
   }, {
     title: 'Visualization Analysis and Design',
     date: 'Monday, November 3',
@@ -4363,7 +4493,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Tutorial',
     organizers: ['Tamara Munzner'],
     link: 'https://ieeevis.org/year/2025/info/program/tutorials#-visualization-analysis-and-design',
-    index: 4
+    index: 4,
+    location: 'Room 1.14'
   }, {
     title: 'VAST Challenge',
     date: 'Monday, November 3',
@@ -4371,7 +4502,8 @@ export let workshops: WorkshopItem[] = [
     series: '',
     type: 'Contest',
     link: 'https://vast-challenge.github.io/2025/',
-    index: 4
+    index: 4,
+    location: 'Hall M2'
   }, {
     title: 'Welcome & VIS Opening / Keynote',
     date: 'Tuesday, November 3',
@@ -4379,15 +4511,17 @@ export let workshops: WorkshopItem[] = [
     series: '',
     type: 'Others',
     link: 'https://ieeevis.org/year/2025/info/invited-speakers/keynote-speaker',
-    index: 5
+    index: 5,
+    location: 'Hall E'
   }, {
     title: 'Welcome Reception',
     date: 'Tuesday, November 3',
     time: "6:30pm - 9:00pm (CET)",
     series: '',
     type: 'Others',
-    link: '',
-    index: 6
+    link: 'https://www.google.at/maps/place/Naturhistorisches+Museum+Wien/@48.2052155,16.3572702,16z/data=!3m2!4b1!5s0x476d0790ee61f175:0x34381eeabe156430!4m6!3m5!1s0x476d0790c107009d:0xc4a12ebf4ed4c5c9!8m2!3d48.205212!4d16.3598451!16zL20vMDU0N2pn?entry=tts&g_ep=EgoyMDI1MTAwMS4wIPu8ASoASAFQAw%3D%3D&skid=105bc0d1-ed28-4bea-a797-13a4995af066',
+    index: 6,
+    location: 'Natural History Museum (Link to Google Maps)'
   }, {
     title: 'VisAble: Who do we exclude by current visualization practices and how do we change that?',
     date: 'Wednesday, November 4',
@@ -4396,7 +4530,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Panel',
     link: 'https://ieeevis.org/year/2025/info/program/panels#visable-who-do-we-exclude-by-current-visualization-practices-and-how-do-we-change-that',
     organizers: ['Nina Doerr', 'Sita Vriend', 'Katrin Angerbauer', 'Miriah Meyer', 'Michael Sedlmair'],
-    panels: ['Dominik Moritz', 'Cindy Xiong Bearfield', 'Alice Thudt', 'Bruce Walker', 'Kim Marriott', 'Danielle Albers Szafir']
+    panels: ['Dominik Moritz', 'Cindy Xiong Bearfield', 'Alice Thudt', 'Bruce Walker', 'Kim Marriott', 'Danielle Albers Szafir'],
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'TALK, TRY, TELL: Challenges and Opportunities for Theory-Grounded Data Visualization in Extended Reality',
     date: 'Wednesday, November 4',
@@ -4405,7 +4540,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Panel',
     link: 'https://ieeevis.org/year/2025/info/program/panels#talk-try-tell-challenges-and-opportunities-for-theory-grounded-data-visualization-in-extended-reality',
     organizers: ['Andreas Bueckle', 'Christiane Hütter', 'Sebastian Pirch', 'Felix Müller', 'Philipp Friedrich', 'Martin Chiettini', 'Jörg Menche', 'Katy Börner'],
-    panels: ['Niklas Elmqvist', 'Renata G. Raidou', 'Chris Bryan', 'Hannes Kaufmann', 'Peter Mindek']
+    panels: ['Niklas Elmqvist', 'Renata G. Raidou', 'Chris Bryan', 'Hannes Kaufmann', 'Peter Mindek'],
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'Research <> Practice Engagement Session',
     date: 'Wednesday, November 4',
@@ -4413,7 +4549,7 @@ export let workshops: WorkshopItem[] = [
     series: '',
     type: 'Vis In Practice',
     link: 'https://ieeevis.org/year/2025/info/visinpractice',
-
+    location: 'Room 0.94 + 0.95'
   }, {
     title: 'From Cognition to Context: A Conversation about Technical Approaches, Social Values, and Tradeoffs in Visualization',
     date: 'Wednesday, November 4',
@@ -4422,7 +4558,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Panel',
     link: 'https://ieeevis.org/year/2025/info/program/panels#from-cognition-to-context-a-conversation-about-technical-approaches-social-values-and-tradeoffs-in-visualization',
     organizers: ['Lane Harrison', 'Alex Kale', 'Miriah Meyer', 'Carolina Nobre', 'Arvind Satyanarayan'],
-    panels: ['Karen Schloss', 'Catherine D’Ignazio', 'John Burn-Murdoch']
+    panels: ['Karen Schloss', 'Catherine D’Ignazio', 'John Burn-Murdoch'],
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'What Does Psychology Really Mean to Visualization Research? Towards PsychXVis and VisXPsych',
     date: 'Wednesday, November 4',
@@ -4431,28 +4568,32 @@ export let workshops: WorkshopItem[] = [
     type: 'Panel',
     link: 'https://ieeevis.org/year/2025/info/program/panels#what-does-psychology-really-mean-to-visualization-research-towards-psychxvis-and-visxpsych',
     organizers: ['Arran Zeyu Wang', 'Danielle Albers Szafir'],
-    panels: ['Min Chen', 'Karen Schloss', 'Alvitta Ottley', 'Lace Padilla', 'Cindy Xiong Bearfield', 'Alex Kale']
+    panels: ['Min Chen', 'Karen Schloss', 'Alvitta Ottley', 'Lace Padilla', 'Cindy Xiong Bearfield', 'Alex Kale'],
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'Poster Session',
     date: 'Wednesday, November 4',
     time: "5:00pm - 6:00pm (CET)",
     series: '',
     type: 'Poster',
-    link: 'https://ieeevis.org/year/2025/info/program/posters'
+    link: 'https://ieeevis.org/year/2025/info/program/posters',
+    location: 'Foyer E'
   }, {
     title: 'Conference Dinner',
     date: 'Wednesday, November 4',
     time: "6:00pm - 9:00pm (CET)",
     series: '',
     type: 'Others',
-    link: ''
+    link: '',
+    location: 'Level 0'
   }, {
     title: 'VISAP Papers',
     date: 'Thursday, November 5',
     time: "9:30am - 10:45am (CET)",
     series: '',
     type: 'Vis Arts Papers',
-    link: 'https://visap.net/2025/'
+    link: 'https://visap.net/2025/programme.html',
+    location: 'Room 1.14'
   }, {
     title: 'IEEE VIS Reviewing - On a Path to Self-Destruction?',
     date: 'Thursday, November 5',
@@ -4461,14 +4602,16 @@ export let workshops: WorkshopItem[] = [
     type: 'Panel',
     link: 'https://ieeevis.org/year/2025/info/program/panels#ieee-vis-reviewing---on-a-path-to-self-destruction',
     organizers: ['Petra Isenberg', 'Gunther H. Weber', 'Niklas Elmqvist', 'Narges Mahyar'],
-    panels: ['Han-Wei Shen', 'Michael Sedlmair', 'Melanie Tory', 'Helwig Hauser', 'Bei Wang', 'Tamara Munzner']
+    panels: ['Han-Wei Shen', 'Michael Sedlmair', 'Melanie Tory', 'Helwig Hauser', 'Bei Wang', 'Tamara Munzner'],
+    location: 'Room 0.11 + 0.12'
   }, {
-    title: 'VISAP Papers',
+    title: 'VISAP Pictorials',
     date: 'Thursday, November 5',
     time: "11:15am - 12:30pm (CET)",
     series: '',
     type: 'Vis Arts Papers',
-    link: 'https://visap.net/2025/'
+    link: 'https://visap.net/2025/programme.html',
+    location: 'Room 1.14'
   }, {
     title: 'Industry Meets Research: Future Needs and Opportunities for Visual Analytics in Industrial Manufacturing',
     date: 'Thursday, November 5',
@@ -4477,7 +4620,8 @@ export let workshops: WorkshopItem[] = [
     type: 'Panel',
     link: 'https://ieeevis.org/year/2025/info/program/panels#industry-meets-research-future-needs-and-opportunities-for-visual-analytics-in-industrial-manufacturing',
     organizers: ['Markus Wagner', 'Christina Stoiber', 'Alexander Rind', 'Tobias Schreck', 'Marc Streit', 'Kresimir Matkovic'],
-    panels: ['Christian Mittermayr', 'Harald Piringer', 'Lena Cibulski', 'Jörn Kohlhammer']
+    panels: ['Christian Mittermayr', 'Harald Piringer', 'Lena Cibulski', 'Jörn Kohlhammer'],
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'Words Divide, Pictures Unite” - Revisiting Otto Neurath’s ISOTYPE at 100',
     date: 'Thursday, November 5',
@@ -4486,28 +4630,32 @@ export let workshops: WorkshopItem[] = [
     type: 'Panel',
     link: 'https://ieeevis.org/year/2025/info/program/panels#words-divide-pictures-unite---revisiting-otto-neuraths-isotype-at-100',
     organizers: ['Wolfgang Aigner', 'Eva Mayr', 'Torsten Möller', 'Verena Ingrid Prantl', 'Florian Windhager'],
-    panels: ['Danielle Albers Szafir', 'Theo Deutinger', 'Hans-Christian Hege', 'Samuel Huron', 'Gunther Sandner', 'Christiane Thenius']
+    panels: ['Danielle Albers Szafir', 'Theo Deutinger', 'Hans-Christian Hege', 'Samuel Huron', 'Gunther Sandner', 'Christiane Thenius'],
+    location: 'Room 0.11 + 0.12'
   }, {
     title: 'How to make money with visualization?',
     date: 'Thursday, November 5',
-    time: "2:00pm - 3:15pm (CET)",
+    time: "3:45pm - 5:00pm (CET)",
     series: '',
     type: 'Meetup',
-    link: ''
+    link: '',
+    location: 'Room 0.11 + 0.12'
   }, {
-    title: 'VISAP Exhibition',
+    title: 'VISAP Opening and Keynote',
     date: 'Thursday, November 5',
     time: "6:00pm - 9:00pm (CET)",
     series: '',
     type: 'Vis Arts Program',
-    link: 'https://visap.net/2025/'
+    link: 'https://visap.net/2025/programme.html',
+    location: 'Atrium – University of Applied Arts Vienna'
   }, {
     title: 'Capston & Closing',
     date: 'Friday, November 7',
     time: "11:15am - 12:30pm (CET)",
     series: '',
     type: 'Others',
-    link: 'https://ieeevis.org/year/2025/info/invited-speakers/capstone-speaker'
+    link: 'https://ieeevis.org/year/2025/info/invited-speakers/capstone-speaker',
+    location: 'Hall E'
   }
 ]
 
